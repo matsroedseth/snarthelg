@@ -1,22 +1,19 @@
 // ====== ./app/app.routes.ts ======
+// Imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }    from '@angular/forms';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
-// Imports
-// Deprecated import
-// import { provideRouter, RouterConfig } from '@angular/router';
-import { ModuleWithProviders }  from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+// Declarations
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { routing } from './app.routes'
 
-// Route Configuration
-export const routes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '', component: AppComponent}
-];
+
 
 @NgModule({
   declarations: [
@@ -26,12 +23,14 @@ export const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule,
-    routes
+    FormsModule,
+    HttpModule,
+    JsonpModule,
+    MatToolbarModule,
+    MatButtonModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
