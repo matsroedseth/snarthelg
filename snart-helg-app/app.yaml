@@ -1,0 +1,8 @@
+runtime: nodejs
+env: flex
+
+env_variables:
+  API_KEY: AIzaSyCmPuDJeVMXk9rX0F4hrJd4KuWuguaOv54
+
+manual_scaling:
+  instances: 1

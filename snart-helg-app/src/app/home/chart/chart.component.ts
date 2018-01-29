@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 
 @Component({
-    selector: 'app-about',
-    templateUrl: './about.component.html',
-    styleUrls: ['./about.component.css']
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.css']
 })
 
 
-export class AboutComponent {
+export class ChartComponent {
     private chart: AmChart;
 
     constructor(private AmCharts: AmChartsService) {
@@ -78,7 +78,7 @@ function getStartOfWeek(date) {
     date.setHours(0, 0, 0, 0);
 
     // Set date to previous Sunday
-    date.setDate(date.getDate() - date.getDay());
+    date.setDate(date.getDate() - date.getDay()+1);
 
     return date;
 }
