@@ -4,7 +4,7 @@ import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.css']
+  styleUrls: ['./chart.component.scss']
 })
 
 
@@ -54,6 +54,7 @@ export class ChartComponent {
                 "enabled": true
             }
         });
+        this.chart.path = "/node_modules/amcharts3/amcharts/";
     }
     ngOnDestroy() {
         if (this.chart) {
