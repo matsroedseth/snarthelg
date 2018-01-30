@@ -28,19 +28,19 @@ export class ChartComponent {
 
             "graphs": [{
                 "balloonText": "[[title]]: [[value]] %",
-                "lineThickness": 2,
+                "lineThickness": 4,
                 "title": "Helgefølelse",
                 "valueField": "helgefolelsedata"
             }, {
                 "balloonText": "[[title]]: [[value]] %",
-                "lineThickness": 2,
+                "lineThickness": 4,
                 "title": "Kvardagsfølelse",
                 "valueField": "dagfolelsedata"
             }],
-            "zoomOutButtonRollOverAlpha": 0.15,
             "chartCursor": {
                 "categoryBalloonDateFormat": "MMM DD JJ:NN",
-                "cursorPosition": "mouse",
+                "cursorPosition": "middle",
+                "enabled": true,
                 "showNextAvailable": true
             },
             "autoMarginOffset": 5,

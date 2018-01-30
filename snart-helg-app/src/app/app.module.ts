@@ -9,6 +9,9 @@ import { AmChartsModule } from "@amcharts/amcharts3-angular";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToolbarModule } from './toolbar/toolbar.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 // Declarations
 import { AppComponent } from './app.component';
@@ -34,6 +37,8 @@ import { ChartComponent } from './home/chart/chart.component';
     HttpModule,
     JsonpModule,
     AmChartsModule,
+    MatCardModule,
+    MatTabsModule,
     routing
   ],
   providers: [],
