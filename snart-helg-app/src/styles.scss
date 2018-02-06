@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/material-theme';
+
+.center {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 20px;
+  }

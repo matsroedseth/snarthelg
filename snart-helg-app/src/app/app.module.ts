@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 // Declarations
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routes';
 import { ChartComponent } from './home/chart/chart.component';
+import { SpinnerComponent } from './home/spinner/spinner.component';
 
 
 
@@ -28,6 +30,7 @@ import { ChartComponent } from './home/chart/chart.component';
     HomeComponent,
     AboutComponent,
     ChartComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ChartComponent } from './home/chart/chart.component';
     AmChartsModule,
     MatCardModule,
     MatTabsModule,
-    routing
+    routing,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
