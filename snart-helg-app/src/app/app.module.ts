@@ -11,7 +11,8 @@ import { CommonModule } from '@angular/common';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 // Declarations
 import { AppComponent } from './app.component';
@@ -41,6 +42,16 @@ import { SpinnerComponent } from './home/spinner/spinner.component';
     AmChartsModule,
     MatCardModule,
     MatTabsModule,
+    FlexLayoutModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    }),
     routing,
   ],
   providers: [],

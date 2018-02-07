@@ -20,6 +20,7 @@ Installed npm packages:
  * @angular/platform-browser-dynamic
  * @angular/router
  * @types/hammerjs
+ * ng-circle-progress
  * amcharts3
  * core-js
  * express
