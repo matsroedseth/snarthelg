@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 // Declarations
@@ -43,7 +42,6 @@ import { SpinnerComponent } from './home/spinner/spinner.component';
     MatCardModule,
     MatTabsModule,
     routing,
-    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -51,7 +51,7 @@ export class ChartComponent {
                 "parseDates": true
             },
             "export": {
-                "enabled": true
+                "enabled": false
             }
         });
         this.chart.path = "/node_modules/amcharts3/amcharts/";
