@@ -41,6 +41,8 @@ export class ChartComponent {
                 "categoryBalloonDateFormat": "MMM DD JJ:NN",
                 "cursorPosition": "middle",
                 "enabled": true,
+                "selectionAlpha":0,
+                "selectWithoutZooming": true,
                 "showNextAvailable": true
             },
             "autoMarginOffset": 5,
