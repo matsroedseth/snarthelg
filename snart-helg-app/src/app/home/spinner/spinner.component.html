@@ -1,10 +1,22 @@
-<circle-progress
-  [percent]="85"
-  [radius]="80"
-  [outerStrokeWidth]="10"
-  [innerStrokeWidth]="6"
-  [outerStrokeColor]="'#78C000'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="1000"
-></circle-progress>
+<div
+  fxLayout="column" 
+  fxLayout.xs="column" 
+  fxFlexFill
+  fxFlexAlign="center">
+    <section class="mat-typography" fxFlex="80" fxLayoutAlign="center" fxFlexOffset="5">
+      <h1>Din helgefølelse nå:</h1>
+    </section>
+  <div fxFlex="20" fxLayoutAlign="space-around center">
+    <circle-progress
+    [percent]="85"
+    [radius]="80"
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="6"
+    [outerStrokeColor]="'#78C000'"
+    [innerStrokeColor]="'#C7E596'"
+    [animation]="true"
+    [animationDuration]="1000"
+  ></circle-progress>
+  </div>
+
+</div>
