@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 
 @Component({
@@ -70,7 +70,6 @@ var dagverdi = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 
 var dagfyll = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"];
 var dagindex = 0;
 var first = true;
-
 
 function getStartOfWeek(date) {
 

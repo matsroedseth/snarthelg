@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss']
 })
-export class SpinnerComponent implements OnInit {
 
+export class SpinnerComponent {
+  private _percent='';
   constructor() { }
 
-  ngOnInit() {
+  @Input()
+  set percentage(percent: string) {
+    this._percent = percent;
   }
 
+  get percentage(): string { return this._percent; }
 }
