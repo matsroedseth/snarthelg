@@ -5,10 +5,13 @@
         fxFlexFill
         fxFlexAlign="center" >
         <div fxFlex="70%" class="sec1">
-                <app-chart>loading...</app-chart>
+                <app-chart [modus]="isParadiseMode | async">loading...</app-chart>
             </div>
         <div fxFlex="30%" fxFlexFill fxFlexAlign="center" class="sec2" >
                 <app-spinner [percentage]=percentageNow></app-spinner>
+                <div fxLayoutAlign="space-around center">
+                    <mat-slide-toggle [checked]="isParadiseMode | async" (change)="toggleParadiseMode($event.checked)">Paradisemodus</mat-slide-toggle>
+                </div>
             </div>
     </div>
 </div>

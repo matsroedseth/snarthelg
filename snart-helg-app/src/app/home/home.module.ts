@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ChartModule,
     MatSlideToggleModule,
     FlexLayoutModule,
+    MatSlideToggleModule
   ],
   declarations: [ HomeComponent ],
   exports: [ HomeComponent ]

@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
+import { Observable } from 'rxjs/Observable';
+import { ParadiseModeService } from '../core/services/paradisemode.service';
 
 @Component({
   selector: 'helgechart',
@@ -10,13 +12,20 @@ import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 export class HomeComponent {
     private _percent;
     private _initialModus: number = 0;
+    isParadiseMode: Observable<boolean>;
+
+    constructor(private paradiseModeService: ParadiseModeService) { }
+  
+    ngOnInit() {
+      this.isParadiseMode = this.paradiseModeService.isParadiseMode;
+    }
 
     get percentageNow(): string {
       return ""+getCurrentPercentage()+""; 
     }
 
-    get getModus(): number {
-      return this._initialModus; 
+    toggleParadiseMode(checked: boolean) {
+      this.paradiseModeService.setParadiseMode(checked);
     }
     
 }

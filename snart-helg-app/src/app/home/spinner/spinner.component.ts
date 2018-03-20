@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
 
 export class SpinnerComponent {
   private _percent='';
-  constructor() { }
 
   @Input()
   set percentage(percent: string) {

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
+import { Observable } from 'rxjs/Observable';
+import { ParadiseModeService } from '../../core/services/paradisemode.service';
 
 @Component({
   selector: 'app-chart',
@@ -10,16 +12,20 @@ import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 
 export class ChartComponent {
     private chart: AmChart;
+    isParadiseMode: Observable < boolean > ;
 
-
-    constructor(private AmCharts: AmChartsService) { 
-        generateChartData(0);        
+    constructor(private AmCharts: AmChartsService, private paradiseModeService: ParadiseModeService) {
+      this.isParadiseMode = this.paradiseModeService.isParadiseMode;
+      generateChartData(0);
     }
-
-
+  
     @Input()
-    set modus(modusselector: number) {
-        generateChartData(1);
+    set modus(isParadiseMode: boolean) {
+      if (isParadiseMode) {
+        console.log("PÆRRA PÅ");
+      } else {
+        console.log("vanlig på..");
+      }
     }
 
 
