@@ -12,6 +12,7 @@ import { ToolbarModule } from './toolbar/toolbar.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 // Declarations
@@ -20,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routes';
 import { ChartComponent } from './home/chart/chart.component';
+import { CoreModule } from './core/core.module';
 import { SpinnerComponent } from './home/spinner/spinner.component';
 
 
@@ -43,6 +45,7 @@ import { SpinnerComponent } from './home/spinner/spinner.component';
     MatCardModule,
     MatTabsModule,
     FlexLayoutModule,
+    CoreModule,
     NgCircleProgressModule.forRoot(),
     routing,
   ],
