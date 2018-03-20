@@ -1,4 +1,4 @@
-<!--<div class="paradise-theme"> -->
+<div [ngClass]="{'paradise-theme': isParadiseMode | async}">
   <div class="mat-app-background">
     <header>
       <app-toolbar></app-toolbar>
@@ -11,4 +11,4 @@
       </div>
     </body>
   </div>
-<!--</div> -->
+</div>

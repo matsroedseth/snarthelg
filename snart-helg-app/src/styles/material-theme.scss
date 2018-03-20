@@ -11,11 +11,10 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 // Our dark theme
 .paradise-theme {
-  color: $light-primary-text;
-  $dark-primary: mat-palette($mat-yellow);
-  $dark-accent: mat-palette($mat-amber, A400, A100, A700);
-  $dark-warn: mat-palette($mat-red);
-  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  $paradise-primary: mat-palette($mat-pink);
+  $paradise-accent: mat-palette($mat-pink, A200, A100, A400);
+  $paradise-warn: mat-palette($mat-red);
+  $paradise-theme: mat-light-theme($paradise-primary, $paradise-accent, $paradise-warn);
 
-  @include angular-material-theme($dark-theme);
+  @include angular-material-theme($paradise-theme);
 }
